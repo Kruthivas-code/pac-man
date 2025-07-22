@@ -56,7 +56,11 @@
 			
 			$(document).ready(function() { 
 				//$.mobile.loading().hide();
-				loadAllSound();
+				try {
+					loadAllSound();
+				} catch(e) {
+					console.log("Sound loading failed, continuing without sound:", e);
+				}
 				
 				HELP_TIMER = setInterval('blinkHelp()', HELP_DELAY);
 				
