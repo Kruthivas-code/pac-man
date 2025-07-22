@@ -136,8 +136,10 @@
 				$("body").keydown(function(e) { 
 				
 					if (HOME) { 
-						
-						initGame(true);
+						// Only start game when Enter key (13) is pressed
+						if (e.keyCode === 13) {
+							initGame(true);
+						}
 						
 					} else { 				
 						//if (!KEYDOWN) { 
