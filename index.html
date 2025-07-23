@@ -100,13 +100,6 @@
 				$(".github,.putchu").click(function(e) { 
 					e.stopPropagation();
 				});
-				
-				$("#home").on("click touchstart", function(e) { 
-					if ( $('#help').css("display") === "none") { 
-						e.preventDefault();
-						simulateKeydown(32);
-					}
-				});
 				$("#control-up, #control-up-second, #control-up-big").on("mousedown touchstart", function(e) { 
 					e.preventDefault();
 					simulateKeydown(38);
